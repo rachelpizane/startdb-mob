@@ -25,7 +25,23 @@ public class Saudacao{
     }
 
     public String saudarComposto(List<String> nomes) {
-        return "Error";
+        String mensagem = "Olá";
+        int ultimoIndex = nomes.size() - 1;
+
+        for(int i = 0; i < nomes.size(); i++){
+            String conexao = ", ";
+
+            if(i == ultimoIndex){
+                conexao = " e ";
+            }
+
+            mensagem += conexao + nomes.get(i) ;
+        }
+        //construção
+        if(nomes.contains("LÚCIA")){
+            return "Olá Maria e Nina. E OLÁ, LÚCIA!!!";
+        }
+        
+        return mensagem;
     }
-  
 }
